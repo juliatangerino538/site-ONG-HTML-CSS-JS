@@ -1,0 +1,335 @@
+:root {
+  --cor-primaria: #1d2d44;
+  --cor-secundaria: #3a506b;
+  --cor-acento: #f36f6f;
+  --cor-acento-claro: #e04f4f;
+  --cor-neutra-clara: #f5f7fa;
+  --cor-neutra-media: #ccc;
+  --cor-neutra-escura: #243447;
+  --cor-branco: #fff;
+
+
+  --font-xs: 0.75rem;
+  --font-sm: 0.9rem;
+  --font-md: 1rem;
+  --font-lg: 1.2rem;
+  --font-xl: 1.5rem;
+  --font-xxl: 2rem;
+
+  
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--cor-neutra-escura);
+  background-color: var(--cor-neutra-clara);
+  line-height: 1.5;
+}
+.titulo-principal {
+  grid-column: span 12; 
+  text-align: center;   
+  font-size: 2rem;      
+  color: #1d2d44;       
+  margin-bottom: 20px;  
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor-primaria);
+  padding: var(--space-2) var(--space-3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: var(--cor-branco);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.logo-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.logo-container h1 {
+  font-size: var(--font-xl);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--space-3);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--cor-branco);
+  font-weight: bold;
+  padding: var(--space-1) var(--space-2);
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--cor-branco);
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-3);
+  max-width: 1200px;
+  margin: var(--space-4) auto;
+  padding: 0 var(--space-2);
+  text-align: center;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  grid-column: span 12;
+}
+
+.banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.banner h2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--cor-branco);
+  background-color: rgba(29, 45, 68, 0.7);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 10px;
+  font-size: var(--font-xl);
+}
+
+.banner .btn {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--cor-acento);
+  color: var(--cor-branco);
+  border: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.banner .btn:hover {
+  background-color: var(--cor-acento-claro);
+}
+.cta {
+  grid-column: 1 / -1; 
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cta h3, .cta p {
+  margin: 0 auto 20px auto;
+  max-width: 600px; 
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-3);
+  grid-column: span 12;
+}
+
+.card {
+  background-color: var(--cor-branco);
+  border-radius: 10px;
+  padding: var(--space-3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+img[src*="dudu-adotado"] {
+  width: 100% !important;
+  height: 230px !important; 
+  object-fit: cover !important;
+  object-position: center 10%;
+  display: block;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.card h3 {
+  color: var(--cor-primaria);
+}
+
+.badge {
+  background-color: var(--cor-acento);
+  color: var(--cor-branco);
+  font-size: var(--font-xs);
+  padding: 2px 8px;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background-color: var(--cor-branco);
+  padding: var(--space-4);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  grid-column: span 12;
+}
+
+form input, form textarea {
+  padding: var(--space-2);
+  border-radius: 8px;
+  border: 1px solid var(--cor-neutra-media);
+  font-size: var(--font-md);
+}
+
+form input:focus, form textarea:focus {
+  border-color: var(--cor-primaria);
+  outline: none;
+}
+
+form button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  border: none;
+  padding: var(--space-2);
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+footer {
+  text-align: center;
+  padding: var(--space-2);
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  margin-top: var(--space-3);
+  border-top: 2px solid var(--cor-acento);
+  font-size: var(--font-sm);
+}
+
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: center;
+    padding: var(--space-2);
+    border-radius: 10px;
+  }
+
+  header input[type="checkbox"]:checked + .hamburger + nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: var(--space-1) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner h2 {
+    font-size: var(--font-lg);
+  }
+
+  .logo-container h1 {
+    font-size: var(--font-lg);
+  }
+
+  .banner .btn {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-sm);
+  }
+}
+.cta {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cta h3, .cta p {
+  margin: 0 auto 20px auto; 
+  max-width: 600px; 
+}
+input.error, textarea.error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+
+span.error-msg {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
+}
+
