@@ -5,7 +5,7 @@ export function validarFormulario() {
     const form = event.target.closest(".form-cadastro");
     if (!form) return;
 
-    event.preventDefault(); // impede o envio automático
+    event.preventDefault(); 
     let valido = true;
 
     form.querySelectorAll("input[required], textarea[required]").forEach(campo => {
@@ -40,6 +40,3 @@ export function validarFormulario() {
     campo.insertAdjacentElement("afterend", span);
   }
 }
-
-
-
