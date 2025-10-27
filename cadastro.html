@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - ONG Amor Animal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<header>
+  <div class="logo-container">
+    <img src="imagens/logo.PNG" alt="Logo da ONG Amor Animal">
+    <h1>ONG Amor Animal</h1>
+  </div>
+
+ 
+  <input type="checkbox" id="menu-toggle-cadastro" style="display:none;">
+  <label for="menu-toggle-cadastro" class="hamburger">&#9776;</label>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html">Projetos Sociais</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+      <li><a href="doacoes.html">Doações</a></li>
+      <li><a href="sobre.html">Sobre Nós</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <h2 class="titulo-principal">Cadastro de Voluntário</h2>
+
+  <form class="form-cadastro" novalidate>
+    <label>Nome Completo *</label>
+    <input type="text" required>
+
+    <label>Email *</label>
+    <input type="email" required>
+
+    <label>CPF *</label>
+    <input type="text" required>
+
+    <label>Endereço *</label>
+    <input type="text" required>
+
+    <label>CEP *</label>
+    <input type="text" required>
+
+    <label>Telefone</label>
+    <input type="tel">
+
+    <label>Mensagem</label>
+    <textarea rows="4"></textarea>
+
+    <label>Você é:</label>
+    <div class="radio-group">
+      <input type="radio" id="voluntario" name="tipo" value="Voluntário" required>
+      <label for="voluntario">Voluntário</label>
+      <input type="radio" id="adotante" name="tipo" value="Adotante" required>
+      <label for="adotante">Adotante</label>
+    </div>
+
+    <label>Você quer adotar:</label>
+    <div class="radio-group">
+      <input type="radio" id="cachorro" name="animal" value="Cachorro" required>
+      <label for="cachorro">Cachorro</label>
+      <input type="radio" id="gato" name="animal" value="Gato" required>
+      <label for="gato">Gato</label>
+    </div>
+
+    <button type="submit" class="btn">Enviar Cadastro</button>
+  </form>
+
+  <div class="cards">
+    <div class="card">
+      <img src="imagens/dudu-adotado.PNG" alt="Voluntário ajudando animais">
+      <h3>Cachorro Dudu</h3>
+      <p>Exemplo de cachorro adotado.</p>
+      <span class="badge">Voluntário</span>
+    </div>
+    <div class="card">
+      <img src="imagens/gato.PNG" alt="Gato">
+      <h3>Gato Adotado</h3>
+      <p>Exemplo de animal adotado com sucesso pela ONG.</p>
+      <span class="badge">Adotado</span>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; ONG Amor Animal</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
