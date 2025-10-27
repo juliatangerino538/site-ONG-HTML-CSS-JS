@@ -6,6 +6,8 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![GitHub](https://img.shields.io/badge/GitHub-%23121011?style=for-the-badge&logo=github&logoColor=white)
 
+link do site compelto: https://juliatangerino538.github.io/site-ONG-HTML-CSS-JS/
+
 ---
 
 ## 🌟 Sobre a ONG
